@@ -1,8 +1,17 @@
+import type { Options } from "prettier";
+
 /**
- * Perform the sum of the provided numbers
- * @param numbers - infinite list of numbers to sum
- * @returns
+ * Eslint configuration object extending the most performant and
+ * commonly used configurations, it alo has some overrides to prevent conflicts with prettier
  */
 
-export const sum = (...numbers: number[]): number =>
-  numbers.reduce((previousValue, currentValue) => currentValue + previousValue);
+const config: Options = {
+  quoteProps: "consistent",
+  bracketSameLine: true,
+  // Sync with linters, formatters and editor configs
+  printWidth: 100,
+};
+
+export default config;
+
+module.exports = config;

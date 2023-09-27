@@ -1,7 +1,13 @@
-import { sum } from "./index";
+import { check } from "prettier";
+import baseConfig from "./index";
 
-describe("Sum", () => {
-  it("should correctly return the sum of the provided numbers", () => {
-    expect(sum(1, 2, 3, 4)).toBe(10);
+describe("Prettier Config", () => {
+  it("should be a configuration object compatible with Prettier", async () => {
+    const formatted = await check("export const X = 1234;\n", {
+      ...baseConfig,
+      parser: "typescript",
+    });
+
+    expect(formatted).toBeTruthy();
   });
 });
