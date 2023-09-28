@@ -5,6 +5,21 @@ import type { Options } from "prettier";
  * commonly used configurations, it alo has some overrides to prevent conflicts with prettier
  */
 
+// {
+//   "printWidth": 100,
+//   "tabWidth": 2,
+//   "useTabs": false,
+//   "semi": true,
+//   "singleQuote": false,
+//   "jsxSingleQuote": false,
+//   "quoteProps": "consistent",
+//   "trailingComma": "es5",
+//   "bracketSpacing": true,
+//   "bracketSameLine": false,
+//   "arrowParens": "always",
+//   "endOfLine": "lf"
+// }
+
 const config: Options = {
   quoteProps: "consistent",
   bracketSameLine: true,
